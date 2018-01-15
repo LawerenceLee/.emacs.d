@@ -14,7 +14,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (tango-dark)))
- '(package-selected-packages (quote (org-plus-contrib evil))))
+ '(package-selected-packages (quote (helm org-plus-contrib evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -26,3 +26,4 @@
 (require 'evil)
 (evil-mode 1)
 (require 'org)
+(require 'helm-config)
