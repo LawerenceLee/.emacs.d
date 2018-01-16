@@ -4,7 +4,6 @@
 (package-initialize)
 
 
-
 ;; Custom Set
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -20,10 +19,22 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+
 
 ;; Packages Initalized at Start
 (require 'evil)
 (evil-mode 1)
 (require 'org)
+
+;; Sets yes/no prompt to y/n
+(fset 'yes-or-no-p 'y-or-n-p)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Helm Configuration
+
 (require 'helm-config)
+
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x r b") 'helm-bookmarks)
+(global-set-key (kbd "C-x m") 'helm-M-x)
